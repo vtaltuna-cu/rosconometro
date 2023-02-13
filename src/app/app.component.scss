@@ -5,8 +5,6 @@
     padding: 50px;
 }
 
-
-
 span {
     margin-left: 15px;
 }
@@ -30,7 +28,6 @@ button{
 
 .letter-rounded{
     border-radius: 50%;
-   // border-style: solid;
     background-color: grey;
     height: 2rem;
     width: 2rem;
@@ -40,7 +37,6 @@ button{
     background-color: blue;
 }
 
-
 .circle1 {
     float: left;
     width: 7rem;
@@ -48,14 +44,9 @@ button{
     margin: 20px;
     shape-outside: circle();
     clip-path: circle();
-  //  background: lightblue;
     position: absolute;
-    //padding-top: 10rem;
-  //  top:-18.3rem;
     left: calc(50% - 4.5rem);
-
 	top: calc(50% - 4.5rem);
-//	left: 50%;
 }
 
 .definition{
@@ -69,14 +60,8 @@ button{
 
 .contain-box{
     float: left;
-   // width: 7rem;
-   // height: 7rem;
     margin: 20px;
-  //  shape-outside: circle();
-  //  clip-path: circle();
-  //  background: lightblue;
     position: absolute;
-    //padding-top: 10rem;
     top:-21.3rem;
     left: calc(50% - 4.8rem);
     background-color: #5391fa;
@@ -86,7 +71,6 @@ button{
 
 .answer-box{
     width: 40%;
-   // text-align: center;
     top: 5rem;
     left :10%;
     display: block;
@@ -98,8 +82,6 @@ button{
 }
 
 .player-title{
-   /* width: 100%;
-    text-align: center;*/
     display: none;
 }
 
@@ -122,7 +104,6 @@ button{
     text-transform: uppercase;
     text-decoration: underline;
     font-weight: bold;
-
 }
 
 .form-group-inline{
@@ -180,14 +161,11 @@ $w-score: 					$s-item * 2.25;//$s-item * 1.25;
 
 // Others
 // -----------------------------------------------------------------------------
-
 $nb-items: 25;
 
 //-----------------------------------------------------------------------------
 //								$MIXINS
 //-----------------------------------------------------------------------------
-
-
 @mixin on-circle($nb-items, $s-circle, $s-item) {
 	position: relative;
 	width: $s-circle;
@@ -212,7 +190,6 @@ $nb-items: 25;
 			&:nth-of-type(#{$i}) {
 				transform: rotate($rot * 1deg) translate($s-circle / 2) rotate($rot * -1deg);
             }
-
 			// Increments the `$rot` variable for next item
 			$rot: $rot + $angle;
         }
@@ -230,21 +207,11 @@ $nb-items: 25;
 /* Circle
  * ----------------------------------------------------------------------------- */
  .circle-container {
-    //position: absolute;
 	width: 100%;
-	//padding-top: 4em;
-
-   // border-style: dotted;
-  //  border-color: #8e001c;
 
 	@media (min-width: 54.75em) {
-		//position: relative;
-		//position: absolute;
-		//width: 50%;
         width: 100%;
 		height: 100%;
-		//padding-top: 0;
-       // padding-top: 26rem; //calcular con el ancho
 	 }
 }
 
@@ -252,8 +219,6 @@ $nb-items: 25;
 	@include on-circle($nb-items, $s-circle-mobile, $s-item-mobile);
 	left: 50%;
 	transform: translateX(-50%);
-
-	//border-style: solid;
 
 	@media (min-width: 54.75em) {
 		@include on-circle($nb-items, $s-circle, $s-item);
@@ -291,23 +256,12 @@ $nb-items: 25;
 		}
 
         &-active {
-			//background-image: radial-gradient(circle, $c-failure, $c-failure-darker);
-            //color: #000;
-		   // font-weight: bold;
-           // animation: blinkingText 2s infinite;
-			//color:black;
 			font-weight: bolder;
 			border-width: 4px;
 			border-style: double;
-           // animation: blinkingBackground 2s infinite;
 		}
 
         @keyframes blinkingText{
-           /* 0%		{ background-color: white;}
-            25%		{ background-color: green;}
-            50%		{ background-color: #ef0a1a;}
-            75%		{ background-color: yellow;}
-            100%	{ background-color: #04a1d5;}*/
 			0%		{ background-image: radial-gradient(circle, $c-bg, $c-base-darker); color:black;}
            
             33%	{ background-image: radial-gradient(circle, $c-base, $c-base-darker);}
@@ -315,16 +269,7 @@ $nb-items: 25;
            
             100%	{ background-image: radial-gradient(circle, $c-base, $c-base-darker);}
         }
-
-        /*@keyframes blinkingBackground{
-            0%		{ background-color: #10c018;}
-            25%		{ background-color: #1056c0;}
-            50%		{ background-color: #ef0a1a;}
-            75%		{ background-color: #254878;}
-            100%	{ background-color: #04a1d5;}
-        }*/
 	}
-
     
 }
 
@@ -362,16 +307,10 @@ $nb-items: 25;
 	}
 
 	.adjust-timer{
-		//display: inline-block;
 		width: 3*$s-timer;
 		height: $s-timer/2;
-		//background-image: radial-gradient(circle, $c-base, $c-base-darker);
-		//color: $c-white;
 		position: absolute;
 		top: $s-timer/2;
-		//left: $s-timer/-2;
-		//border-color: #8e001c;
-		//border-style: dotted;
 	}
 
 	.score {
@@ -380,7 +319,6 @@ $nb-items: 25;
 		height: $h-score;
 		margin-top: .5em;
 		border: 2px solid $c-white;
-		//background-image: radial-gradient(circle, $c-base, $c-base-darker);
 		color: $c-white;
 		font-weight: 900;
 		line-height: $h-score;
@@ -405,23 +343,14 @@ $nb-items: 25;
 	position: absolute;
 	right: 2em;
 	top: 4em;
-	
 	text-align: center;
 	color: $c-white;
-
-	
-	//background-color: #5391fa;
-
 
 	h3,
 	small {
 		color: black;
-		//border-color: #8e001c;
-		//border-style: solid;
-		//border-width: 1px;
 		margin-bottom: 0;
 	}
-	
 
 	.btn-reload{
 		width: 100%;
@@ -446,18 +375,12 @@ $nb-items: 25;
 
 .wildcard{
 	position: absolute;
-	//left:0;
 	top: 30%;
-	//width: $w-score * 2;
-	//border-style: dashed;
-	//align-items: center;
-	//align-content: center;
 	text-align: center;
 	margin-left: 4em;
 
 	.item-wildcard  {
 		border-style: solid;
-		//margin-left: 5em;
 		width: $s-item;
 		height: $s-item;
 		line-height: $s-item;
@@ -465,7 +388,6 @@ $nb-items: 25;
 		border-radius: 50%;
 		background-image: radial-gradient(circle, magenta	, purple);
 		color: yellow;
-
 	}
 
 	.used{
