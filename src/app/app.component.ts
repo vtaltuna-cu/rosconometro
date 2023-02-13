@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormArray, FormBuilder, FormControl, FormGroup, Validators, ReactiveFormsModule, AbstractControl } from '@angular/forms';
-import { FormsModule } from '@angular/forms';
+import { FormArray, FormBuilder, FormControl, FormGroup, Validators, FormsModule, ReactiveFormsModule, AbstractControl } from '@angular/forms';
 
 export class GlassGame  {
     public id: number | undefined;
@@ -76,6 +75,9 @@ export enum GlassAnswerStatus {
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent  implements OnInit {
+  title(title: any) {
+    throw new Error('Method not implemented.');
+  }
   
   public game : GlassGame;
 
