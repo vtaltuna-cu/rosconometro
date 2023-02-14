@@ -39,14 +39,16 @@ button{
 
 .circle1 {
     float: left;
-    width: 7rem;
-    height: 7rem;
-    margin: 20px;
+    width: 20vh;
+    height: 20vh;
+   // margin: 20px;
     shape-outside: circle();
     clip-path: circle();
     position: absolute;
-    left: calc(50% - 4.5rem);
-	top: calc(50% - 4.5rem);
+    left: calc(50% - 10vh);
+	top: calc(50% - 10vh);
+
+	//background-color: #004b8d;
 }
 
 .definition{
@@ -90,7 +92,7 @@ button{
 }
 
 .extrasize{
-    font-size: 5rem;
+    font-size: 15vh;//5rem;
     text-align: center;
 }
 
@@ -174,7 +176,7 @@ $nb-items: 25;
 	padding: 0;
 	list-style: none;
 
-	border-style: solid;
+	//border-style: solid;
 
 	> * {
 		display: block;
