@@ -144,16 +144,16 @@ $c-red:						#d90000;
 // Sizes
 // -----------------------------------------------------------------------------
 
-$s-item:				 	3.25em;
-$s-circle: 					$s-item * 10;
+$s-item:				 	80vh/10;//3.5em;
+$s-circle: 					80vh;//$s-item * 10;
 
-$s-item-mobile:				1.25em;
-$s-circle-mobile: 			$s-item * 9.5;
+$s-item-mobile:				80vw/10;//1.25em;
+$s-circle-mobile: 			80vw;//$s-item * 5.5;
 
 $h-scoreboard: 				$s-item * 3;
 $w-scoreboard: 				$s-item * 5;
 
-$s-timer:				 	$s-item * 1.25;
+$s-timer:				 	$s-item * 1.8;//$s-item * 1.25;
 
 $h-score: 					$s-item * 1.25;//$s-item * .75;
 $w-score: 					$s-item * 2.25;//$s-item * 1.25;
@@ -173,6 +173,8 @@ $nb-items: 25;
 	border-radius: 50%;
 	padding: 0;
 	list-style: none;
+
+	border-style: solid;
 
 	> * {
 		display: block;
@@ -206,7 +208,7 @@ $nb-items: 25;
 
 /* Circle
  * ----------------------------------------------------------------------------- */
- .circle-container {
+.circle-container {
 	width: 100%;
 
 	@media (min-width: 54.75em) {
@@ -279,6 +281,7 @@ $nb-items: 25;
 	margin: 0 0 1em 2em;
 	padding: 0;
 	list-style: none;
+	//border-style: solid;
 
 	@media (min-width: 54.75em) {
 		position: absolute;
@@ -303,14 +306,17 @@ $nb-items: 25;
 		text-align: center;
 		text-decoration: none;
 		cursor: default;
-		font-size: 1.5rem;
+		font-size: $s-item/2;//1.5rem;
 	}
 
 	.adjust-timer{
-		width: 3*$s-timer;
+		width: 1.7*$s-timer;
 		height: $s-timer/2;
 		position: absolute;
-		top: $s-timer/2;
+		z-index: -10;
+		//top: $s-timer/2;
+		top: 20%;
+	//	border-style: dotted;
 	}
 
 	.score {
