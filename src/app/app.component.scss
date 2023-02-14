@@ -306,8 +306,8 @@ $nb-items: 25;
 		and (max-width : 480px) {  
 		/* Styles */  
 		top:  $s-circle/4;
-		//left: 50%;
-		//transform: translateX(-50%);
+		left: 50%;
+		transform: translateX(-50%);
 		//margin-top: 5vh;
 		//background-color: #b64926;
 	} 
@@ -349,7 +349,7 @@ $nb-items: 25;
 	}
 
 	.adjust-timer{
-		width: 1.9*$s-timer;
+		width: 2*$s-timer;
 		height: $s-timer/2;
 		position: absolute;
 	//	z-index: -10;
@@ -456,13 +456,15 @@ $nb-items: 25;
 	//top: 70vh;
 	.wildcard{
 		//top: 0;
-		bottom: 4vh;
+		bottom: 18vh;
 		//margin-left: 0;
 		//right: 3vw;
 		//left: 50vw;
-
-		left: 50%;
-		transform: translateX(-50%);
+		//margin-right: $h-score;
+		right: 2vw;//2em;
+		//left: 50%;
+		//transform: translateX(-50%);
+		display: flex;
 	}
 	
 } 
