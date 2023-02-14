@@ -2,7 +2,9 @@
     display: flex;
     flex-direction: column;
     flex: 1 1 auto;
-    padding: 50px;
+    padding: 1vh 1vh 1vw 1vw;
+
+	
 }
 
 span {
@@ -37,19 +39,7 @@ button{
     background-color: blue;
 }
 
-.circle1 {
-    float: left;
-    width: 20vh;
-    height: 20vh;
-   // margin: 20px;
-    shape-outside: circle();
-    clip-path: circle();
-    position: absolute;
-    left: calc(50% - 10vh);
-	top: calc(50% - 10vh);
 
-	//background-color: #004b8d;
-}
 
 .definition{
     position: relative;
@@ -82,6 +72,8 @@ button{
         width: 25%;
     }
 }
+
+
 
 .player-title{
     display: none;
@@ -149,8 +141,8 @@ $c-red:						#d90000;
 $s-item:				 	80vh/10;//3.5em;
 $s-circle: 					80vh;//$s-item * 10;
 
-$s-item-mobile:				80vw/10;//1.25em;
-$s-circle-mobile: 			80vw;//$s-item * 5.5;
+$s-item-mobile:				70vw/8;//1.25em;
+$s-circle-mobile: 			70vw;//$s-item * 5.5;
 
 $h-scoreboard: 				$s-item * 3;
 $w-scoreboard: 				$s-item * 5;
@@ -175,6 +167,8 @@ $nb-items: 25;
 	border-radius: 50%;
 	padding: 0;
 	list-style: none;
+
+	font-size: 2vw;;
 
 	//border-style: solid;
 
@@ -220,18 +214,28 @@ $nb-items: 25;
 }
 
 .circle {
-	@include on-circle($nb-items, $s-circle-mobile, $s-item-mobile);
-	left: 50%;
-	transform: translateX(-50%);
+//	@include on-circle($nb-items, $s-circle-mobile, $s-item-mobile);
+	//left: 50%;
+	//transform: translateX(-50%);
 
-	@media (min-width: 54.75em) {
+//	@media (min-width: 54.75em) {
 		@include on-circle($nb-items, $s-circle, $s-item);
 		position: absolute;
 		top: 50%;
 		left: 50%;
 		margin: 0;
 		transform: translate(-50%, -50%);
-	 }
+//	 }
+
+	@media only screen  
+		and (min-width : 320px)  
+		and (max-width : 480px) {  
+	/* Styles */  
+		@include on-circle($nb-items, $s-circle-mobile, $s-item);
+		left: 50%;
+		transform: translateX(-50%);
+		margin-top: 5vh;
+	} 
 
 	.item {
 		display: block;
@@ -246,6 +250,15 @@ $nb-items: 25;
 		text-align: center;
 		text-decoration: none;
 		cursor: default;
+
+		@media only screen  
+			and (min-width : 320px)  
+			and (max-width : 480px) {  
+			/* Styles */  
+			width: $s-item-mobile;
+			height: $s-item-mobile;
+			line-height: $s-item-mobile;
+		} 
 
 		&-success {
 			background-image: radial-gradient(circle, $c-success, $c-success-darker);
@@ -277,22 +290,46 @@ $nb-items: 25;
     
 }
 
+.circle1 {
+    float: left;
+    width: 20vh;
+    height: 20vh;
+   // margin: 20px;
+    shape-outside: circle();
+    clip-path: circle();
+    position: absolute;
+    left: calc(50% - 10vh);
+	top: calc(50% - 10vh);
+
+	@media only screen  
+		and (min-width : 320px)  
+		and (max-width : 480px) {  
+		/* Styles */  
+		top:  $s-circle/4;
+		//left: 50%;
+		//transform: translateX(-50%);
+		//margin-top: 5vh;
+		//background-color: #b64926;
+	} 
+
+	//background-color: #004b8d;
+}
+
 /* Scoreboard
  * ----------------------------------------------------------------------------- */
  .scoreboard {
 	margin: 0 0 1em 2em;
 	padding: 0;
 	list-style: none;
+	
 	//border-style: solid;
 
-	@media (min-width: 54.75em) {
-		position: absolute;
-		bottom: 3em;
-
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-	 }
+	position: absolute;
+	left: 2vw;//2em;
+	bottom: 2vh;//4em;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 
 
 	.timer {
@@ -325,7 +362,7 @@ $nb-items: 25;
 		display: inherit;
 		width: $w-score;
 		height: $h-score;
-		margin-top: .5em;
+		margin-top: .5vh;
 		border: 2px solid $c-white;
 		color: $c-white;
 		font-weight: 900;
@@ -333,6 +370,7 @@ $nb-items: 25;
 		text-align: center;
 		text-decoration: none;
 		cursor: default;
+		font-size: $h-score/1.8;
 
 		.corrects{
 			background-image: radial-gradient(circle, $c-success, $c-success-darker);
@@ -347,10 +385,16 @@ $nb-items: 25;
 	}
 }
 
+.manager-box {
+	position: absolute; 
+	bottom: 2vh; 
+	right: 4vw;//2em;
+} 
+
 .otherPlayer{
 	position: absolute;
-	right: 2em;
-	top: 4em;
+	right: 2vw;//2em;
+	top: 2vh;//4em;
 	text-align: center;
 	color: $c-white;
 
@@ -383,10 +427,10 @@ $nb-items: 25;
 
 .wildcard{
 	position: absolute;
-	top: 30%;
+	
 	text-align: center;
-	margin-left: 4em;
-
+	//margin-left: 4em;
+	
 	.item-wildcard  {
 		border-style: solid;
 		width: $s-item;
@@ -403,3 +447,42 @@ $nb-items: 25;
 		color: darkgray;
 	}
 }
+
+@media only screen  
+	and (min-width : 320px)  
+	and (max-width : 480px) {  
+	/* Styles */  
+	//bottom: 5vh;
+	//top: 70vh;
+	.wildcard{
+		//top: 0;
+		bottom: 4vh;
+		//margin-left: 0;
+		//right: 3vw;
+		//left: 50vw;
+
+		left: 50%;
+		transform: translateX(-50%);
+	}
+	
+} 
+
+@media only screen  
+	and (min-width : 481px)  
+	{  
+	/* Styles */  
+	//bottom: 5vh;
+	//top: 70vh;
+	.wildcard{
+		//top: 0;
+		//bottom: 10vh;
+		//margin-left: 0;
+		//right: 3vw;
+		//left: 10vw;
+		top: 30%;
+		margin-left: $h-score;
+		left: 2vw;//2em;
+	}
+	
+} 
+
