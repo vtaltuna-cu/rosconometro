@@ -111,10 +111,10 @@ export class AppComponent  implements OnInit {
 
       player1               : ["Jugador 1", [Validators.required]],
       player2               : ["Jugador 2", [Validators.required]],
-      seconds               : [150, [Validators.required]],
+      seconds               : [140, [Validators.required]],
       playerCount           : [this.game.playerCount, [Validators.required]],
       allLetters            : [this.game.allLetters, [Validators.required]],
-      wildcard              : [3, [Validators.required]],
+      wildcard              : [2, [Validators.required]],
 
     //  wildcards        : this._formBuilder.array([
         //this._formBuilder.control('')

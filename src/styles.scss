@@ -338,3 +338,106 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     color:#00365a;
     text-decoration:initial!important
    }
+
+
+   .has-float-label>span:after,
+   .has-float-label label:after {
+    background:#fff
+   }
+   .has-float-label>div.error:after {
+    background:initial
+   }
+
+   .has-float-label {
+    display:block;
+    position:relative
+   }
+   .has-float-label>span:last-of-type,
+   .has-float-label label {
+    position:absolute;
+    cursor:text;
+    font-size:90%;
+    opacity:1;
+    top:-.4em;
+    left:.75rem;
+    z-index:3;
+    line-height:1;
+    padding:0 1px
+   }
+   .has-float-label>span:after,
+   .has-float-label label:after {
+    content:" ";
+    display:block;
+    position:absolute;
+    height:5px;
+    top:3px;
+    left:-.2em;
+    right:-.2em;
+    z-index:-1
+   }
+   .has-float-label .form-control::placeholder {
+    opacity:1
+   }
+   .has-float-label .form-control:placeholder-shown:not(:focus)::placeholder {
+    opacity:0
+   }
+   .input-group .has-float-label {
+    flex-grow:1;
+    margin-bottom:0;
+    display:flex;
+    flex-direction:column;
+    justify-content:center
+   }
+   .input-group .has-float-label .form-control {
+    width:100%
+   }
+   .input-group .has-float-label:not(:last-child),
+   .input-group .has-float-label:not(:last-child) .form-control {
+    border-bottom-right-radius:0;
+    border-top-right-radius:0;
+    border-right:0
+   }
+   .input-group .has-float-label:not(:first-child),
+   .input-group .has-float-label:not(:first-child) .form-control {
+    border-bottom-left-radius:0;
+    border-top-left-radius:0
+   }
+
+   .rtl .has-float-label>span:last-of-type,
+   .rtl .has-float-label label,
+   .rtl .has-top-label>span:last-of-type,
+   .rtl .has-top-label label {
+    right:.75rem;
+    left:auto
+   }
+   .rtl .has-float-label>span,
+   .rtl .has-float-label label,
+   .rtl .has-top-label>span,
+   .rtl .has-top-label label {
+    color:rgba(58,58,58,.7)
+   }
+
+   .landing-page form.dark-background .has-float-label>span,
+   .landing-page form.dark-background .has-float-label label,
+   .landing-page form.dark-background .has-top-label>span,
+   .landing-page form.dark-background .has-top-label label {
+    color:hsla(0,0%,100%,.6)
+   }
+   .landing-page form.dark-background .bootstrap-tagsinput,
+   .landing-page form.dark-background .form-control {
+    background:transparent;
+    border-color:hsla(0,0%,100%,.3);
+    color:#fff
+   }
+   .landing-page form.dark-background .bootstrap-tagsinput:active,
+   .landing-page form.dark-background .bootstrap-tagsinput:focus,
+   .landing-page form.dark-background .form-control:active,
+   .landing-page form.dark-background .form-control:focus {
+    border-color:hsla(0,0%,100%,.6)
+   }
+   .landing-page .has-float-label>span,
+   .landing-page .has-float-label label,
+   .landing-page .has-top-label>span,
+   .landing-page .has-top-label label {
+    font-size:64%
+   }

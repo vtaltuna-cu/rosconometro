@@ -3,8 +3,8 @@
   <form class="needs-validation" name="searchForm"  [formGroup]="searchForm"   novalidate style="display: flex; flex: 1 1 auto; overflow-y: hidden; justify-content: center;"> 
 
       <div class="row text-center" *ngIf="!startedGame" style="justify-content: center; align-content: center; "  >
-          <fieldset class="form-group col-6" >
-              <div class="row" style="border-radius: 15px; border-style: solid; ">
+          <fieldset class="form-group col-6" style="background-color: white;">
+              <div class="row" style="border-radius: 15px;  align-items: center;">
                   <legend class="col-form-label ">Configuración del Juego</legend>
                   <label class="form-group has-float-label ">
                       <input type="text" class="form-control" formControlName="player1"  />
@@ -17,19 +17,20 @@
                       <small class="invalid-feedback">Campo obligatorio</small>
                   </label>
 
-                  <label class="form-group has-float-label  ">
+                  <label class="form-group has-float-label  col-6">
                       <input type="number" class="form-control" formControlName="seconds"  />
                       <span>Segundos</span>
                       <small class="invalid-feedback">Campo obligatorio</small>
                   </label>
 
-                  <label class="form-group has-float-label  ">
+                  <label class="form-group has-float-label  col-6">
                       <input type="number" class="form-control" formControlName="wildcard"  />
                       <span>Comodines</span>
                       <small class="invalid-feedback">Campo obligatorio</small>
                   </label>
 
-                  <button  class="btn btn-primary float-right" (click)="onStartGame()" >
+                  <div class="col-2"></div>
+                  <button  class="btn btn-primary col-8" (click)="onStartGame()" >
                       Comenzar
                   </button>
               </div>
