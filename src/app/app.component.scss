@@ -349,10 +349,10 @@ $nb-items: 25;
 	}
 
 	.adjust-timer{
-		width: 1.7*$s-timer;
+		width: 1.9*$s-timer;
 		height: $s-timer/2;
 		position: absolute;
-		z-index: -10;
+	//	z-index: -10;
 		//top: $s-timer/2;
 		top: 20%;
 	//	border-style: dotted;
