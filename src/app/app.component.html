@@ -5,7 +5,7 @@
       <div class="row text-center" *ngIf="!startedGame" style="justify-content: center; align-content: center; "  >
           <fieldset class="form-group col-6" style="background-color: white;">
               <div class="row" style="border-radius: 15px;  align-items: center;">
-                  <legend class="col-form-label ">Configuración del Juego</legend>
+                  <h2 class="col-form-label ">Configuración del Juego</h2>
                   <label class="form-group has-float-label ">
                       <input type="text" class="form-control" formControlName="player1"  />
                       <span>Jugador 1 </span>
@@ -76,9 +76,12 @@
               
               <div style="height: 100%;" [class.hidden]="player.get('active')!.value === false" >
               
-                  <h2>Jugando:</h2>
-                  <div class="w100"></div>
-                  <h1>{{player.get('name')!.value}}</h1>
+                <div class="player-name-text">
+                    <h3>Jugando</h3>
+                    <div class="w100"></div>
+                    <h1 >{{player.get('name')!.value}}</h1>
+                 </div>
+                  
                     <label class="col-10 game-over-text circle1" *ngIf="player.get('gameOver')!.value === true">
                        Juego terminado
                     </label>
