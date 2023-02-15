@@ -135,6 +135,7 @@ export class AppComponent  implements OnInit {
         correctAnswers : new FormControl(p.correctAnswers),
         failAnswers : new FormControl(0),
         isTimerPaused : new FormControl(true),
+        gameOver : new FormControl(false),
         playerItems:  this._formBuilder.array([
 
         ]),
@@ -146,7 +147,6 @@ export class AppComponent  implements OnInit {
       let i = 1;
       p.playerItems.sort((a,b) => a.letter.localeCompare(b.letter)).forEach(item => {
         const playerItem = this._formBuilder.group({
-         // isContain:   new FormControl(item.isContain),
           letter:   new FormControl(item.letter),
           status : new FormControl(i===1?GlassAnswerStatus.Active:GlassAnswerStatus.Pending),
           order : new FormControl(i)
@@ -345,6 +345,7 @@ export class AppComponent  implements OnInit {
     }
     player.get("correctAnswers")!.setValue(answers);
     player.get("failAnswers")!.setValue(fails);
+    player.get("gameOver")!.setValue(fails+answers==25);
   }
   
   foundNextActiveLetter(itemIndex : number, player: AbstractControl): any{

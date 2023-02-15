@@ -88,6 +88,15 @@ button{
     text-align: center;
 }
 
+.game-over-text{
+    font-size: 4vh;//5rem;
+    text-align: center;
+	display: flex;
+	flex-wrap: wrap;
+	align-content: center;
+	color: #b9121b;
+}
+
 .capital-letter{
     text-transform: uppercase;
     text-align: center;

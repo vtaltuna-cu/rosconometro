@@ -79,6 +79,9 @@
                   <h2>Jugando:</h2>
                   <div class="w100"></div>
                   <h1>{{player.get('name')!.value}}</h1>
+                    <label class="col-10 game-over-text circle1" *ngIf="player.get('gameOver')!.value === true">
+                       Juego terminado
+                    </label>
                   <div class="" formArrayName="playerItems" >
                       
                           <div *ngFor="let item of getPlayerItems(player)!.controls; let j = index;" formGroupName="{{j}}" [class.hidden]="item.get('status')!.value !== 1">
