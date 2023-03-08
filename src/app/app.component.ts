@@ -65,6 +65,7 @@ export class AppComponent  implements OnInit {
 
     this.game = this.getNewGame(0);
     this.game.playerCount = 2;
+    console.log("Entré al cosntructor");
   }
 
   ngOnInit(): void {
