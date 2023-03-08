@@ -1,12 +1,28 @@
+:host {
+    //flex: 1 1 auto;
+    width: 100%;
+    height: 100%;
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    background-image: url('../assets/playa-5.jpg');
+   // background-image: url('https://vien-angular.coloredstrategies.com/balloon-lg.c94920d96c9c2213c3ea.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 0px;
+}
+/*
 :host{
     display: flex;
     flex-direction: column;
     flex: 1 1 auto;
     padding: 1vh 1vh 1vw 1vw;
-
-	
 }
-
+*/
 //-----------------------------------------------------------------------------
 //								$VARIABLES
 //-----------------------------------------------------------------------------
